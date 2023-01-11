@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: hsl(248, 39%, 39%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  position: relative;
+  height: 200vh;
+}
+
+.card {
+  width: 50vw;
+  height: 50px;
+  background-color: hsl(250, 89%, 83%);
+  position: sticky;
+  top: 0;
+  border: 7px solid hsl(250, 100%, 93%);
+}
+a {
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  font: 700 2em sans-serif;
+  letter-spacing: 8px;
+  margin: 0 auto 0 auto;
+  display: block;
+  text-align: center;
+  -webkit-text-stroke: white 0.4px;
+}

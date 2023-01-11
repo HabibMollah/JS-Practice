@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/output.css" />
+  </head>
+  <body class="h-[400vh] bg-blue-100">
+    <!-- NAV-BAR -->
+    <div class="sticky top-0 flex justify-evenly">
+      <div
+        class="h-[6vh] w-[50vw] rounded-3xl border bg-blue-200 font-mono text-[2.5rem] font-extrabold tracking-[1rem] text-blue-800"
+      >
+        <a href="" class="block text-center">Home</a>
+      </div>
+      <div
+        class="h-[6vh] w-[50vw] rounded-3xl border bg-blue-200 font-mono text-[2.5rem] font-extrabold tracking-[1rem] text-blue-800"
+      >
+        <a href="" class="block text-center">About</a>
+      </div>
+    </div>
+    <!-- CHECKLIST -->
+    <div class="my-56 flex items-center justify-center text-xl">
+      <div
+        class="flex w-[100vw] flex-row items-center justify-center rounded-3xl bg-blue-200"
+      >
+        <li class="list-none py-8 leading-10">
+          <ul class="">
+            <input class="" type="checkbox" name="ckbx" id="chkbx" /><label
+              class="px-8"
+              for="chkbx"
+              >The function should check if name is an actual contact's
+              firstName and the given property (prop) is a property of that
+              contact.</label
+            >
+          </ul>
+          <ul class="">
+            <input class="" type="checkbox" name="ckbx" id="chkbx" /><label
+              class="px-8"
+              for="chkbx"
+              >If both are true, then return the "value" of that
+              property.</label
+            >
+          </ul>
+          <ul class="">
+            <input class="" type="checkbox" name="ckbx" id="chkbx" /><label
+              class="px-8"
+              for="chkbx"
+              >If name does not correspond to any contacts then return the
+              string No such contact.</label
+            >
+          </ul>
+          <ul class="">
+            <input class="" type="checkbox" name="ckbx" id="chkbx" /><label
+              class="px-8"
+              for="chkbx"
+              >If prop does not correspond to any valid properties of a contact
+              found to match name then return the string No such
+              property.</label
+            >
+          </ul>
+        </li>
+      </div>
+    </div>
+
+    <script src="/index.js"></script>
+  </body>
+</html>
