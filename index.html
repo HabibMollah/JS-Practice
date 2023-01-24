@@ -1,70 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/output.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
-  <body class="h-[400vh] bg-blue-100">
-    <!-- NAV-BAR -->
-    <div class="sticky top-0 flex justify-evenly">
-      <div
-        class="h-[6vh] w-[50vw] rounded-3xl border bg-blue-200 font-mono text-[2.5rem] font-extrabold tracking-[1rem] text-blue-800"
-      >
-        <a href="" class="block text-center">Home</a>
-      </div>
-      <div
-        class="h-[6vh] w-[50vw] rounded-3xl border bg-blue-200 font-mono text-[2.5rem] font-extrabold tracking-[1rem] text-blue-800"
-      >
-        <a href="" class="block text-center">About</a>
-      </div>
-    </div>
-    <!-- CHECKLIST -->
-    <div class="my-56 flex items-center justify-center text-xl">
-      <div
-        class="flex w-[100vw] flex-row items-center justify-center rounded-3xl bg-blue-200"
-      >
-        <li class="list-none py-8 leading-10">
-          <ul class="">
-            <input class="" type="checkbox" name="ckbx" id="chkbx" /><label
-              class="px-8"
-              for="chkbx"
-              >The function should check if name is an actual contact's
-              firstName and the given property (prop) is a property of that
-              contact.</label
-            >
-          </ul>
-          <ul class="">
-            <input class="" type="checkbox" name="ckbx" id="chkbx" /><label
-              class="px-8"
-              for="chkbx"
-              >If both are true, then return the "value" of that
-              property.</label
-            >
-          </ul>
-          <ul class="">
-            <input class="" type="checkbox" name="ckbx" id="chkbx" /><label
-              class="px-8"
-              for="chkbx"
-              >If name does not correspond to any contacts then return the
-              string No such contact.</label
-            >
-          </ul>
-          <ul class="">
-            <input class="" type="checkbox" name="ckbx" id="chkbx" /><label
-              class="px-8"
-              for="chkbx"
-              >If prop does not correspond to any valid properties of a contact
-              found to match name then return the string No such
-              property.</label
-            >
-          </ul>
-        </li>
-      </div>
-    </div>
+  <body>
+    <p>Check the console below this page</p>
+    <script src="index.js"></script>
 
-    <script src="/index.js"></script>
+    <script>
+      // Don't worry about this code here, just checking your results :)
+      // I get it, you're curious,
+      // but it's OK if you don't understand what's going on in here, you'll learn it in time.
+
+      let numCorrect = 0;
+      let numChecked = 0;
+
+      const result = numberChecker();
+      console.log(`You entered: ${number}, and got result: ${result}`);
+      console.log("\n\n\n Test Results: \n");
+
+      function checkNumberChecker(num) {
+        number = num;
+        const result = numberChecker();
+        if (
+          (result === true && number >= 10) ||
+          (result === false && number < 10)
+        ) {
+          numCorrect++;
+          console.log(
+            `If I enter ${number}, the result is ${result}. This is correct!`
+          );
+        } else {
+          console.error(
+            `I entered "${number}", and got "${result}" as a result, I should have gotten "${
+              number >= 10
+            }" instead`
+          );
+        }
+
+        numChecked++;
+        console.log("\n");
+      }
+
+      checkNumberChecker(2);
+      checkNumberChecker(12);
+      checkNumberChecker(6);
+      checkNumberChecker(10);
+      checkNumberChecker(9);
+
+      if (numCorrect === numChecked) {
+        console.log(
+          "You've passed all the tests, continue to the next lesson!"
+        );
+      } else {
+        console.log(
+          `You have failed ${
+            numChecked - numCorrect
+          } out of ${numChecked}, please try again`
+        );
+      }
+    </script>
   </body>
 </html>
